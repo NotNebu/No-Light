@@ -1,7 +1,11 @@
-﻿using System;
-using No_Light_RPG.Acts.Act_1;
+﻿using No_Light_RPG.Acts.Act_1.Act_1_East;
+using No_Light_RPG.Acts.Act_1.Act_1_North;
+using No_Light_RPG.Acts.Act_1.Act_1_South;
+using No_Light_RPG.Acts.Act_1.Act_1_West;
 
-public abstract class Act1Start2
+namespace No_Light_RPG.Acts.Act_1;
+
+public class Act1Start2
 {
     public static void LookAround(Player player)
     {
@@ -15,6 +19,7 @@ public abstract class Act1Start2
         Console.WriteLine("2. South");
         Console.WriteLine("3. West");
         Console.WriteLine("4. East");
+        Console.WriteLine("5. Go back");
         Console.Write("Choose a direction: ");
         string choice = Console.ReadLine();
         Console.WriteLine();
@@ -22,16 +27,19 @@ public abstract class Act1Start2
         switch (choice)
         {
             case "1":
-                DirectionHandler.GoNorth(player);
+                Act1StartNorth1.Begin(player);
                 break;
             case "2":
-                DirectionHandler.GoSouth(player);
+                Act1StartSouth1.Begin(player);
                 break;
             case "3":
-                DirectionHandler.GoWest(player);
+                Act1StartWest1.Begin(player);
                 break;
             case "4":
-                DirectionHandler.GoEast(player);
+                Act1StartEast1.Begin(player);
+                break;
+            case "5":
+                Act1Start1.OutsideHouse(player);
                 break;
             default:
                 Console.WriteLine("Invalid choice, please try again.");

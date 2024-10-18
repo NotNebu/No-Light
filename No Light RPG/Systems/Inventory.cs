@@ -31,6 +31,19 @@ public class Inventory
         }
     }
 
+    public void RemoveItemByName(string itemName)
+    {
+        Item itemToRemove = Items.FirstOrDefault(i => i.Name.Equals(itemName, StringComparison.OrdinalIgnoreCase));
+        if (itemToRemove != null)
+        {
+            RemoveItem(itemToRemove);
+        }
+        else
+        {
+            Console.WriteLine($"Item '{itemName}' not found in your inventory.");
+        }
+    }
+    
     public void ShowInventory()
     {
         Console.WriteLine("Inventory:");
