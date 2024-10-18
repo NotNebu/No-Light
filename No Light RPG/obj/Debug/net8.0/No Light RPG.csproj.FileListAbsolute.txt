@@ -1,0 +1,14 @@
+D:\Projekter\No Light RPG\No Light RPG\No Light RPG\bin\Debug\net8.0\No Light RPG.exe
+D:\Projekter\No Light RPG\No Light RPG\No Light RPG\bin\Debug\net8.0\No Light RPG.deps.json
+D:\Projekter\No Light RPG\No Light RPG\No Light RPG\bin\Debug\net8.0\No Light RPG.runtimeconfig.json
+D:\Projekter\No Light RPG\No Light RPG\No Light RPG\bin\Debug\net8.0\No Light RPG.dll
+D:\Projekter\No Light RPG\No Light RPG\No Light RPG\bin\Debug\net8.0\No Light RPG.pdb
+D:\Projekter\No Light RPG\No Light RPG\No Light RPG\obj\Debug\net8.0\No Light RPG.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projekter\No Light RPG\No Light RPG\No Light RPG\obj\Debug\net8.0\No Light RPG.AssemblyInfoInputs.cache
+D:\Projekter\No Light RPG\No Light RPG\No Light RPG\obj\Debug\net8.0\No Light RPG.AssemblyInfo.cs
+D:\Projekter\No Light RPG\No Light RPG\No Light RPG\obj\Debug\net8.0\No Light RPG.csproj.CoreCompileInputs.cache
+D:\Projekter\No Light RPG\No Light RPG\No Light RPG\obj\Debug\net8.0\No Light RPG.dll
+D:\Projekter\No Light RPG\No Light RPG\No Light RPG\obj\Debug\net8.0\refint\No Light RPG.dll
+D:\Projekter\No Light RPG\No Light RPG\No Light RPG\obj\Debug\net8.0\No Light RPG.pdb
+D:\Projekter\No Light RPG\No Light RPG\No Light RPG\obj\Debug\net8.0\No Light RPG.genruntimeconfig.cache
+D:\Projekter\No Light RPG\No Light RPG\No Light RPG\obj\Debug\net8.0\ref\No Light RPG.dll
