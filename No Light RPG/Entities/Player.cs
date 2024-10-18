@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
+using No_Light_RPG.Acts.Act_1;
 
 public class Player
 {
@@ -117,7 +118,7 @@ public class Player
         Thread.Sleep(10000);
         
         Console.WriteLine();
-        Act1Start.Begin(this);
+        Act1Start0.Begin(this);
     }
 
     public void ShowStats()

@@ -1,19 +1,21 @@
-﻿using System;
+﻿using No_Light_RPG.Act_1;
 
-public class Act1Start
+namespace No_Light_RPG.Acts.Act_1;
+
+public class Act1Start0
 {
     public static void Begin(Player player)
     {
         Console.Clear();
         Console.WriteLine("===================================");
-        Console.WriteLine("          ACT 1: START             ");
+        Console.WriteLine("          ACT 1: START - PART 0    ");
         Console.WriteLine("===================================");
         Console.WriteLine();
         Console.WriteLine("You wake up in an abandoned house, half destroyed and barely holding together.");
         Console.WriteLine("Inside the house, there's a table, a broken chair, and some burlaps you slept on.");
         Console.WriteLine();
-        Console.WriteLine("1. Explore around");
-        Console.WriteLine("2. Walk outside");
+        Console.WriteLine("1. Explore the house");
+        Console.WriteLine("2. Step outside");
         Console.WriteLine();
 
         Console.Write("Choose an action (1 or 2): ");
@@ -26,11 +28,11 @@ public class Act1Start
                 ExploreHouse(player);
                 break;
             case "2":
-                GoOutside(player);
+                Act1Start1.OutsideHouse(player); 
                 break;
             default:
                 Console.WriteLine("Invalid choice, please try again.");
-                Thread.Sleep(1000); // Delay for 1 second
+                Thread.Sleep(1000);
                 Begin(player);
                 break;
         }
@@ -55,25 +57,13 @@ public class Act1Start
         switch (choice)
         {
             case "1":
-                GoOutside(player);
+                Act1Start1.OutsideHouse(player);
                 break;
             default:
                 Console.WriteLine("Invalid choice, please try again.");
-                Thread.Sleep(1000); // Delay for 1 second
+                Thread.Sleep(1000);
                 ExploreHouse(player);
                 break;
         }
-    }
-
-    private static void GoOutside(Player player)
-    {
-        Console.Clear();
-        Console.WriteLine("===================================");
-        Console.WriteLine("          OUTSIDE HOUSE            ");
-        Console.WriteLine("===================================");
-        Console.WriteLine();
-        Console.WriteLine("You step outside the house.");
-        Console.WriteLine();
-        Act1OutsideHouse.Start(player);
     }
 }

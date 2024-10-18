@@ -22,7 +22,7 @@ public class Act
 
     public void Choose(int choiceIndex)
     {
-        // Handle the choice
+        
         Console.WriteLine($"You chose: {Choices[choiceIndex]}");
     }
 }

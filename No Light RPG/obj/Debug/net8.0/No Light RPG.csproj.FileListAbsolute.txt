@@ -12,3 +12,18 @@ D:\Projekter\No Light RPG\No Light RPG\No Light RPG\obj\Debug\net8.0\refint\No L
 D:\Projekter\No Light RPG\No Light RPG\No Light RPG\obj\Debug\net8.0\No Light RPG.pdb
 D:\Projekter\No Light RPG\No Light RPG\No Light RPG\obj\Debug\net8.0\No Light RPG.genruntimeconfig.cache
 D:\Projekter\No Light RPG\No Light RPG\No Light RPG\obj\Debug\net8.0\ref\No Light RPG.dll
+C:\Users\Nebul\Documents\GitHub\No-Light\No Light RPG\bin\Debug\net8.0\No Light RPG.exe
+C:\Users\Nebul\Documents\GitHub\No-Light\No Light RPG\bin\Debug\net8.0\No Light RPG.deps.json
+C:\Users\Nebul\Documents\GitHub\No-Light\No Light RPG\bin\Debug\net8.0\No Light RPG.runtimeconfig.json
+C:\Users\Nebul\Documents\GitHub\No-Light\No Light RPG\bin\Debug\net8.0\No Light RPG.dll
+C:\Users\Nebul\Documents\GitHub\No-Light\No Light RPG\bin\Debug\net8.0\No Light RPG.pdb
+C:\Users\Nebul\Documents\GitHub\No-Light\No Light RPG\obj\Debug\net8.0\No Light RPG.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nebul\Documents\GitHub\No-Light\No Light RPG\obj\Debug\net8.0\No Light RPG.AssemblyInfoInputs.cache
+C:\Users\Nebul\Documents\GitHub\No-Light\No Light RPG\obj\Debug\net8.0\No Light RPG.AssemblyInfo.cs
+C:\Users\Nebul\Documents\GitHub\No-Light\No Light RPG\obj\Debug\net8.0\No Light RPG.csproj.CoreCompileInputs.cache
+C:\Users\Nebul\Documents\GitHub\No-Light\No Light RPG\obj\Debug\net8.0\No Light RPG.sourcelink.json
+C:\Users\Nebul\Documents\GitHub\No-Light\No Light RPG\obj\Debug\net8.0\No Light RPG.dll
+C:\Users\Nebul\Documents\GitHub\No-Light\No Light RPG\obj\Debug\net8.0\refint\No Light RPG.dll
+C:\Users\Nebul\Documents\GitHub\No-Light\No Light RPG\obj\Debug\net8.0\No Light RPG.pdb
+C:\Users\Nebul\Documents\GitHub\No-Light\No Light RPG\obj\Debug\net8.0\No Light RPG.genruntimeconfig.cache
+C:\Users\Nebul\Documents\GitHub\No-Light\No Light RPG\obj\Debug\net8.0\ref\No Light RPG.dll

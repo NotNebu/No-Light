@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nebul\\OneDrive\\Projekter\\Games\\No Light RPG 2\\No Light RPG\\No Light RPG.csproj": {}
+    "C:\\Users\\Nebul\\Documents\\GitHub\\No-Light\\No Light RPG\\No Light RPG.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nebul\\OneDrive\\Projekter\\Games\\No Light RPG 2\\No Light RPG\\No Light RPG.csproj": {
+    "C:\\Users\\Nebul\\Documents\\GitHub\\No-Light\\No Light RPG\\No Light RPG.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nebul\\OneDrive\\Projekter\\Games\\No Light RPG 2\\No Light RPG\\No Light RPG.csproj",
+        "projectUniqueName": "C:\\Users\\Nebul\\Documents\\GitHub\\No-Light\\No Light RPG\\No Light RPG.csproj",
         "projectName": "No Light RPG",
-        "projectPath": "C:\\Users\\Nebul\\OneDrive\\Projekter\\Games\\No Light RPG 2\\No Light RPG\\No Light RPG.csproj",
+        "projectPath": "C:\\Users\\Nebul\\Documents\\GitHub\\No-Light\\No Light RPG\\No Light RPG.csproj",
         "packagesPath": "C:\\Users\\Nebul\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nebul\\OneDrive\\Projekter\\Games\\No Light RPG 2\\No Light RPG\\obj\\",
+        "outputPath": "C:\\Users\\Nebul\\Documents\\GitHub\\No-Light\\No Light RPG\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Nebul\\AppData\\Roaming\\NuGet\\NuGet.Config"
