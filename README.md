@@ -1,5 +1,7 @@
 # No Light RPG
 
+![No Light RPG Banner](https://github.com/NotNebu/No-Light/blob/master/No%20Light%20RPG/assets/NoLightDemo1.png?raw=true)
+
 No Light RPG is a text-based CLI RPG game built in C# where players can explore different paths, encounter enemies, and make strategic choices.
 
 ## Table of Contents
@@ -51,6 +53,9 @@ Controls
     2. Manage your inventory using options in the menu.
     3. Equip gear and use items to aid you in combat.
 ```
+
+![No Light RPG Banner](https://github.com/NotNebu/No-Light/blob/master/No%20Light%20RPG/assets/NoLightDemo4.png?raw=true)
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
