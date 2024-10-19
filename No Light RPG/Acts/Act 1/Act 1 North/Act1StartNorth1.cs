@@ -2,6 +2,8 @@
 
 public class Act1StartNorth1
 {
+    private static bool chestOpened = false; // Prevent multiple searches
+
     public static void Begin(Player player)
     {
         Console.Clear();
@@ -16,7 +18,7 @@ public class Act1StartNorth1
         Console.WriteLine();
         Console.WriteLine("1. Inspect the chest");
         Console.WriteLine("2. Look around the campsite");
-        Console.WriteLine("3. Return to the main path");
+        Console.WriteLine("3. Continue further down the path");
         Console.WriteLine();
         Console.Write("Choose an action: ");
         string choice = Console.ReadLine();
@@ -25,13 +27,22 @@ public class Act1StartNorth1
         switch (choice)
         {
             case "1":
-                InspectChest(player);
+                if (!chestOpened)
+                {
+                    InspectChest(player);
+                }
+                else
+                {
+                    Console.WriteLine("The chest is already empty.");
+                    Thread.Sleep(2000);
+                    Begin(player);
+                }
                 break;
             case "2":
                 LookAroundCampsite(player);
                 break;
             case "3":
-                Act1Start2.LookAround(player); 
+                Act1StartNorth2.Begin(player); 
                 break;
             default:
                 Console.WriteLine("Invalid choice, please try again.");
@@ -48,35 +59,13 @@ public class Act1StartNorth1
         Console.WriteLine("          INSPECTING CHEST         ");
         Console.WriteLine("===================================");
         Console.WriteLine();
-        Console.WriteLine("You carefully open the chest, and inside you find some useful items.");
-        Console.WriteLine("You pick up a handful of coins and a mysterious amulet.");
-        
+        Console.WriteLine("You carefully open the chest, and inside you find a handful of coins and a mysterious amulet.");
         player.Inventory.AddItem(new Item("Coins", "Currency", 50));
         player.Inventory.AddItem(new Item("Mysterious Amulet", "Accessory", 0));
-        
-        Console.WriteLine();
+        chestOpened = true;
         Console.WriteLine("Items added to your inventory.");
-        Console.WriteLine("You close the chest and stand up.");
         Thread.Sleep(2000);
-        Console.WriteLine("1. Look around the campsite");
-        Console.WriteLine("2. Return to the main path");
-        Console.Write("Choose an action: ");
-        string choice = Console.ReadLine();
-
-        switch (choice)
-        {
-            case "1":
-                LookAroundCampsite(player);
-                break;
-            case "2":
-                Act1Start2.LookAround(player);
-                break;
-            default:
-                Console.WriteLine("Invalid choice, please try again.");
-                Thread.Sleep(1000);
-                InspectChest(player);
-                break;
-        }
+        Begin(player);
     }
 
     private static void LookAroundCampsite(Player player)
@@ -86,33 +75,8 @@ public class Act1StartNorth1
         Console.WriteLine("          AROUND THE CAMPSITE      ");
         Console.WriteLine("===================================");
         Console.WriteLine();
-        Console.WriteLine("You take a closer look around the campsite. The fire pit is cold and unused.");
-        Console.WriteLine("Nearby, you find a worn-out backpack. Most of it is empty, except for a small key.");
-        
-        player.Inventory.AddItem(new Item("Small Key", "Key", 0));
-
-        
-        Console.WriteLine();
-        Console.WriteLine("The small key might be useful later. You place it in your inventory.");
+        Console.WriteLine("The fire pit is cold and unused. You find an old backpack nearby, but it's empty.");
         Thread.Sleep(2000);
-        Console.WriteLine("1. Inspect the chest again");
-        Console.WriteLine("2. Return to the main path");
-        Console.Write("Choose an action: ");
-        string choice = Console.ReadLine();
-
-        switch (choice)
-        {
-            case "1":
-                InspectChest(player);
-                break;
-            case "2":
-                Act1Start2.LookAround(player);
-                break;
-            default:
-                Console.WriteLine("Invalid choice, please try again.");
-                Thread.Sleep(1000);
-                LookAroundCampsite(player);
-                break;
-        }
+        Begin(player);
     }
 }

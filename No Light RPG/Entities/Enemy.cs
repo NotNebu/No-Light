@@ -5,6 +5,7 @@
     public int Mana { get; set; }
     public int AttackPower { get; set; }
     public int Defense { get; set; }
+    public bool IsAlive => Health > 0;
 
     public Enemy(string name, int health, int mana, int attackPower, int defense)
     {

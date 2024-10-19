@@ -14,6 +14,7 @@ public class Player
     public Inventory Inventory { get; set; }
     public List<Spell> Spells { get; set; }
     public int Gold { get; set; }
+    public bool IsAlive => Health > 0;
 
     public int AttackPower
     {

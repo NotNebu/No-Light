@@ -31,6 +31,11 @@ public class Inventory
         }
     }
 
+    public Item GetItemByName(string itemName)
+    {
+        return Items.FirstOrDefault(i => i.Name.Equals(itemName, StringComparison.OrdinalIgnoreCase));
+    }
+    
     public void RemoveItemByName(string itemName)
     {
         Item itemToRemove = Items.FirstOrDefault(i => i.Name.Equals(itemName, StringComparison.OrdinalIgnoreCase));

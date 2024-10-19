@@ -9,14 +9,13 @@ public class Act1StartNorth2
         Console.WriteLine("          NORTH - PART 2           ");
         Console.WriteLine("===================================");
         Console.WriteLine();
-        Console.WriteLine("You decide to venture deeper into the woods, leaving the campsite behind.");
-        Console.WriteLine("The trees become denser, and the path less clear. You hear faint rustling nearby.");
-        Console.WriteLine("As you move forward, you stumble upon an old, rusty gate partially hidden by foliage.");
-        Console.WriteLine("The gate is locked, but it has a keyhole that looks like it might fit the small key you found.");
+        Console.WriteLine("You continue further North, leaving the campsite behind.");
+        Console.WriteLine("The path becomes narrower, surrounded by thick trees.");
+        Console.WriteLine("In the distance, you see a small, rickety bridge over a stream.");
         Console.WriteLine();
-        Console.WriteLine("1. Try using the small key to unlock the gate");
-        Console.WriteLine("2. Look around the area");
-        Console.WriteLine("3. Go back to the campsite");
+        Console.WriteLine("1. Cross the bridge");
+        Console.WriteLine("2. Examine the stream");
+        Console.WriteLine("3. Continue along the path without crossing");
         Console.WriteLine();
         Console.Write("Choose an action: ");
         string choice = Console.ReadLine();
@@ -25,13 +24,13 @@ public class Act1StartNorth2
         switch (choice)
         {
             case "1":
-                UseKeyOnGate(player);
+                CrossBridge(player);
                 break;
             case "2":
-                LookAroundArea(player);
+                ExamineStream(player);
                 break;
             case "3":
-                Act1StartNorth1.Begin(player); 
+                Act1StartNorth3.Begin(player);
                 break;
             default:
                 Console.WriteLine("Invalid choice, please try again.");
@@ -41,66 +40,41 @@ public class Act1StartNorth2
         }
     }
 
-    private static void UseKeyOnGate(Player player)
+    private static void CrossBridge(Player player)
     {
         Console.Clear();
-        Console.WriteLine("===================================");
-        Console.WriteLine("          UNLOCKING THE GATE       ");
-        Console.WriteLine("===================================");
+        Console.WriteLine("You carefully cross the rickety bridge, making sure it holds your weight.");
+        Console.WriteLine("As you reach the other side, a shadowy figure emerges from the underbrush.");
+        Console.WriteLine("It's a bandit, and he looks ready for a fight!");
+        Console.WriteLine();
+        Console.WriteLine("Press any key to engage in combat...");
+        Console.ReadKey();
         
-        if (player.Inventory.HasItem("Small Key"))
+        Enemy bandit = new Enemy("Bandit", 30, 10, 5, 2); 
+        Combat.StartCombat(player, bandit);
+        
+        if (player.Health > 0)
         {
-            Console.WriteLine("You insert the small key into the lock, and with a bit of effort, it turns.");
-            Console.WriteLine("The gate creaks open, revealing a hidden path leading deeper into the forest.");
-            Console.WriteLine("You cautiously step through the gate, wondering what lies ahead.");
-            
-            player.Inventory.RemoveItemByName("Small Key");
-            Console.WriteLine();
-            Console.WriteLine("The key has been used and is now removed from your inventory.");
-            Thread.Sleep(2000);
+            Console.WriteLine("After defeating the bandit, you find some supplies left behind.");
+            player.Inventory.AddItem(new Item("Bandage", "Medical", 10));
+            Console.WriteLine("You collect the supplies and continue your journey.");
+            Thread.Sleep(5000);
             Act1StartNorth3.Begin(player); 
         }
         else
         {
-            Console.WriteLine("You reach for the key, but realize you don't have it.");
-            Console.WriteLine("Perhaps you should search the area more thoroughly.");
-            Thread.Sleep(2000);
-            Begin(player);
+            Console.WriteLine("You have been defeated. The journey ends here...");
         }
     }
 
 
-    private static void LookAroundArea(Player player)
+    private static void ExamineStream(Player player)
     {
         Console.Clear();
-        Console.WriteLine("===================================");
-        Console.WriteLine("          AROUND THE GATE          ");
-        Console.WriteLine("===================================");
-        Console.WriteLine();
-        Console.WriteLine("You carefully inspect the area around the gate.");
-        Console.WriteLine("There are some peculiar symbols carved into the gateposts, and the ground is littered with old leaves.");
-        Console.WriteLine("You find nothing of immediate value, but the symbols seem ancient, almost mystical.");
-        Console.WriteLine("It's clear that this gate has been here for a long time.");
-        Console.WriteLine();
-        Console.WriteLine("1. Try to unlock the gate with the key");
-        Console.WriteLine("2. Return to the previous path");
-        Console.Write("Choose an action: ");
-        string choice = Console.ReadLine();
-        Console.WriteLine();
-
-        switch (choice)
-        {
-            case "1":
-                UseKeyOnGate(player);
-                break;
-            case "2":
-                Act1StartNorth1.Begin(player); 
-                break;
-            default:
-                Console.WriteLine("Invalid choice, please try again.");
-                Thread.Sleep(1000);
-                LookAroundArea(player);
-                break;
-        }
+        Console.WriteLine("You kneel by the stream, cupping the cool water in your hands. It's refreshing.");
+        Console.WriteLine("As you look closer, you notice something shiny under the water.");
+        player.Inventory.AddItem(new Item("Silver Coin", "Currency", 5));
+        Thread.Sleep(2000);
+        Act1StartNorth3.Begin(player); 
     }
 }
