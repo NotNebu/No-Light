@@ -7,9 +7,7 @@ No Light RPG is a text-based CLI RPG game built in C# where players can explore 
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Building](#building)
 - [Gameplay](#gameplay)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Features
@@ -41,7 +39,21 @@ To run the game:
 ```bash
 dotnet run
 ```
+Or simply run the EXE file from Release:
+```bash
+./NoLightRPG.exe
+```
 
-Method 2:
+## Gameplay
 
-1. Download the EXE from Release
+The game begins with your character waking up in an unfamiliar place. You must choose which direction to explore, each with its own dangers and rewards.
+Controls
+```
+    Choose options by entering the corresponding number.
+    Manage your inventory using options in the menu.
+    Equip gear and use items to aid you in combat.
+```
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
