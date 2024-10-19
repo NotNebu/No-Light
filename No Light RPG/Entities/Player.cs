@@ -15,6 +15,10 @@ public class Player
     public List<Spell> Spells { get; set; }
     public int Gold { get; set; }
     public bool IsAlive => Health > 0;
+    
+    public double CritChance { get; set; } = 0.1;
+    
+    public double CritMultiplier { get; set; } = 1.5; 
 
     public int AttackPower
     {
@@ -37,7 +41,7 @@ public class Player
         Name = name;
         Inventory = new Inventory();
         Spells = new List<Spell>();
-        Gold = 100; // Initial gold amount
+        Gold = 100; 
     }
 
     public void ChooseClass()

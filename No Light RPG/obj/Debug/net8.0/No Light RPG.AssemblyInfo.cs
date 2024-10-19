@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("No Light RPG")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e7f362b5c90e66630a6806152dacb4159ba9bf9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+59559ce77f5e4b65cbc54ec241646f6bbcc1406f")]
 [assembly: System.Reflection.AssemblyProductAttribute("No Light RPG")]
 [assembly: System.Reflection.AssemblyTitleAttribute("No Light RPG")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

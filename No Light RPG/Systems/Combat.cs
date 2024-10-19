@@ -1,7 +1,8 @@
-﻿using System;
+﻿namespace No_Light_RPG.Systems;
 
 public class Combat
 {
+    private static Random random = new Random();
     public static void StartCombat(Player player, Enemy enemy)
     {
         Console.WriteLine($"A wild {enemy.Name} appears!");
@@ -33,7 +34,7 @@ public class Combat
                     break;
             }
 
-            if (enemy.Health <= 0)
+            if (!enemy.IsAlive)
             {
                 Console.WriteLine($"You have defeated the {enemy.Name}!");
                 inCombat = false;
@@ -52,10 +53,32 @@ public class Combat
 
     public static void Attack(Player player, Enemy enemy)
     {
-        int damage = player.AttackPower - enemy.Defense;
-        damage = damage < 0 ? 0 : damage;
+        int damage = CalculateDamage(player.AttackPower, enemy.Defense, player.CritChance, player.CritMultiplier);
         enemy.Health -= damage;
         Console.WriteLine($"You dealt {damage} damage to the {enemy.Name}. It has {enemy.Health} health left.");
+    }
+
+    public static void EnemyAttack(Player player, Enemy enemy)
+    {
+        int damage = CalculateDamage(enemy.AttackPower, player.Defense, enemy.CritChance, enemy.CritMultiplier);
+        player.Health -= damage;
+        Console.WriteLine($"The {enemy.Name} dealt {damage} damage to you. You have {player.Health} health left.");
+    }
+
+    private static int CalculateDamage(int baseAttack, int targetDefense, double critChance, double critMultiplier)
+    {
+        int damage = baseAttack - targetDefense;
+        damage = damage < 0 ? 0 : damage;
+        
+        bool isCriticalHit = random.NextDouble() < critChance;
+
+        if (isCriticalHit)
+        {
+            damage = (int)(damage * critMultiplier);
+            Console.WriteLine("Critical Hit!"); 
+        }
+
+        return damage;
     }
 
     public static void UseMagic(Player player, Enemy enemy)
@@ -130,13 +153,5 @@ public class Combat
         {
             Console.WriteLine("Invalid choice, please try again.");
         }
-    }
-
-    public static void EnemyAttack(Player player, Enemy enemy)
-    {
-        int damage = enemy.AttackPower - player.Defense;
-        damage = damage < 0 ? 0 : damage;
-        player.Health -= damage;
-        Console.WriteLine($"The {enemy.Name} dealt {damage} damage to you. You have {player.Health} health left.");
     }
 }

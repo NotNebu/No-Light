@@ -1,6 +1,4 @@
-﻿using No_Light_RPG.Act_1;
-
-namespace No_Light_RPG.Acts.Act_1;
+﻿namespace No_Light_RPG.Acts.Act_1;
 
 public class Act1Start0
 {

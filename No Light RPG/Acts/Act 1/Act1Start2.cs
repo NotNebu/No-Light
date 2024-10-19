@@ -27,16 +27,16 @@ public class Act1Start2
         switch (choice)
         {
             case "1":
-                Act1StartNorth1.Begin(player);
+                DescribeNorth(player);
                 break;
             case "2":
-                Act1StartSouth1.Begin(player);
+                DescribeSouth(player);
                 break;
             case "3":
-                Act1StartWest1.Begin(player);
+                DescribeWest(player);
                 break;
             case "4":
-                Act1StartEast1.Begin(player);
+                DescribeEast(player);
                 break;
             case "5":
                 Act1Start1.OutsideHouse(player);
@@ -45,6 +45,139 @@ public class Act1Start2
                 Console.WriteLine("Invalid choice, please try again.");
                 Thread.Sleep(1000);
                 LookAround(player);
+                break;
+        }
+    }
+
+    private static void DescribeNorth(Player player)
+    {
+        Console.Clear();
+        Console.WriteLine("===================================");
+        Console.WriteLine("           LOOK NORTH              ");
+        Console.WriteLine("===================================");
+        Console.WriteLine();
+        Console.WriteLine("You look to the north and see a trail leading deeper into the forest.");
+        Console.WriteLine("There is a faint trail of smoke rising from what could be a camp.");
+        Console.WriteLine();
+        Console.WriteLine("1. Head North");
+        Console.WriteLine("2. Go back");
+        Console.Write("Choose an action: ");
+        string choice = Console.ReadLine();
+
+        switch (choice)
+        {
+            case "1":
+                Act1StartNorth1.Begin(player);
+                break;
+            case "2":
+                LookAround(player);
+                break;
+            default:
+                Console.WriteLine("Invalid choice, please try again.");
+                Thread.Sleep(1000);
+                DescribeNorth(player);
+                break;
+        }
+    }
+
+    private static void DescribeSouth(Player player)
+    {
+        Console.Clear();
+        Console.WriteLine("===================================");
+        Console.WriteLine("           LOOK SOUTH              ");
+        Console.WriteLine("===================================");
+        Console.WriteLine();
+        Console.WriteLine("You look to the south and see the path you just came from, leading back to the house.");
+        Console.WriteLine("The house stands silent, its windows dark and foreboding.");
+        Console.WriteLine();
+        Console.WriteLine("1. Head South");
+        Console.WriteLine("2. Go back");
+        Console.Write("Choose an action: ");
+        string choice = Console.ReadLine();
+
+        switch (choice)
+        {
+            case "1":
+                Console.WriteLine();
+                Console.WriteLine("This path is not yet implemented.");
+                Thread.Sleep(2000);
+                LookAround(player); // Not Yet Implemented Path
+                break;
+            case "2":
+                LookAround(player);
+                break;
+            default:
+                Console.WriteLine("Invalid choice, please try again.");
+                Thread.Sleep(1000);
+                DescribeSouth(player);
+                break;
+        }
+    }
+
+    private static void DescribeWest(Player player)
+    {
+        Console.Clear();
+        Console.WriteLine("===================================");
+        Console.WriteLine("           LOOK WEST               ");
+        Console.WriteLine("===================================");
+        Console.WriteLine();
+        Console.WriteLine("You look to the west and see a dense thicket of trees.");
+        Console.WriteLine("The forest seems darker in that direction, with undergrowth making the way difficult.");
+        Console.WriteLine();
+        Console.WriteLine("1. Head West");
+        Console.WriteLine("2. Go back");
+        Console.Write("Choose an action: ");
+        string choice = Console.ReadLine();
+
+        switch (choice)
+        {
+            case "1":
+                Console.WriteLine();
+                Console.WriteLine("This path is not yet implemented.");
+                Thread.Sleep(2000);
+                LookAround(player); // Not Yet Implemented Path
+                break;
+            case "2":
+                LookAround(player);
+                break;
+            default:
+                Console.WriteLine("Invalid choice, please try again.");
+                Thread.Sleep(1000);
+                DescribeWest(player);
+                break;
+        }
+    }
+
+    private static void DescribeEast(Player player)
+    {
+        Console.Clear();
+        Console.WriteLine("===================================");
+        Console.WriteLine("           LOOK EAST               ");
+        Console.WriteLine("===================================");
+        Console.WriteLine();
+        Console.WriteLine("You look to the east and see a clear path that seems to lead out of the forest.");
+        Console.WriteLine("The path is bathed in sunlight, making it feel less ominous than the other directions.");
+        Console.WriteLine();
+        Console.WriteLine("1. Head East");
+        Console.WriteLine("2. Go back");
+        Console.Write("Choose an action: ");
+        string choice = Console.ReadLine();
+
+        switch (choice)
+        {
+            case "1":
+                Console.WriteLine();
+                Console.WriteLine("This path is not yet implemented.");
+                Thread.Sleep(2000);
+                LookAround(player); // Not Yet Implemented Path
+                break;
+            case "2":
+                LookAround(player);
+                break;
+            default:
+                Console.WriteLine("Invalid choice, please try again.");
+                Thread.Sleep(1000);
+                DescribeEast(player);
                 break;
         }
     }

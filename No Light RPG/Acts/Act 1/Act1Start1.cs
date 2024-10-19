@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Threading;
-using No_Light_RPG.Act_1;
 using No_Light_RPG.Acts.Act_1;
 
 public static class Act1Start1

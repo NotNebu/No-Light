@@ -8,7 +8,7 @@ public class Game
     {
         Console.Clear();
         Console.WriteLine("===================================");
-        Console.WriteLine("     WELCOME TO THE ADVENTURE      ");
+        Console.WriteLine("     WELCOME TO NO LIGHT RPG      ");
         Console.WriteLine("===================================");
         Console.WriteLine();
         Console.Write("Enter your name: ");

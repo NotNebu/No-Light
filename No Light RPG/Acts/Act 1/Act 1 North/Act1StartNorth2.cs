@@ -1,4 +1,6 @@
-﻿namespace No_Light_RPG.Acts.Act_1.Act_1_North;
+﻿using No_Light_RPG.Systems;
+
+namespace No_Light_RPG.Acts.Act_1.Act_1_North;
 
 public class Act1StartNorth2
 {
@@ -50,7 +52,14 @@ public class Act1StartNorth2
         Console.WriteLine("Press any key to engage in combat...");
         Console.ReadKey();
         
-        Enemy bandit = new Enemy("Bandit", 30, 10, 5, 2); 
+        Enemy bandit = new Enemy("Bandit", 30, 10, 5, 2);
+        
+        Gear banditWeapon = new Gear("Rusty Dagger", 3, 0); 
+        Gear banditArmor = new Gear("Leather Vest", 0, 3);   
+        bandit.EquipWeapon(banditWeapon);
+        bandit.EquipArmor(banditArmor);
+
+        
         Combat.StartCombat(player, bandit);
         
         if (player.Health > 0)
@@ -58,16 +67,15 @@ public class Act1StartNorth2
             Console.WriteLine("After defeating the bandit, you find some supplies left behind.");
             player.Inventory.AddItem(new Item("Bandage", "Medical", 10));
             Console.WriteLine("You collect the supplies and continue your journey.");
-            Thread.Sleep(5000);
-            Act1StartNorth3.Begin(player); 
+            Thread.Sleep(2000);
+            Act1StartNorth3.Begin(player);
         }
         else
         {
             Console.WriteLine("You have been defeated. The journey ends here...");
         }
     }
-
-
+    
     private static void ExamineStream(Player player)
     {
         Console.Clear();
