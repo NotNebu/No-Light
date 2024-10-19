@@ -40,18 +40,16 @@ To run the game:
 dotnet run
 ```
 Or simply run the EXE file from Release:
-```bash
-./NoLightRPG.exe
-```
+[NoLightRPG.exe](https://github.com/NotNebu/No-Light/releases/download/Demo/No.Light.RPG.exe)
 
 ## Gameplay
 
 The game begins with your character waking up in an unfamiliar place. You must choose which direction to explore, each with its own dangers and rewards.
 Controls
 ```
-    Choose options by entering the corresponding number.
-    Manage your inventory using options in the menu.
-    Equip gear and use items to aid you in combat.
+    1. Choose options by entering the corresponding number.
+    2. Manage your inventory using options in the menu.
+    3. Equip gear and use items to aid you in combat.
 ```
 ## License
 
